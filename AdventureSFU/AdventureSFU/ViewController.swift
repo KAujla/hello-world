@@ -23,6 +23,7 @@ class ViewController: UIViewController {
             //            let successfulLogin =  UIStoryboardSegue(identifier: nil, source: self, destination: nextScreen)
             //            successfulLogin.perform()
             performSegue(withIdentifier: "login", sender: nil)
+            //dismiss(animated: true, completion: nil)
             
         } else {
             let incorect = UIAlertController(title: "incorrect", message: "incorrect", preferredStyle: .alert)

@@ -9,10 +9,16 @@
 import UIKit
 
 class MainViewController: UIViewController {
+    var isLoggedIn = false
     let defaultWIPMessage = "this module is still in development, please comeback later"
     override func viewDidLoad() {
         super.viewDidLoad()
-
+//        print("the view loaded and login is is \(isLoggedIn)")
+//        if isLoggedIn == false {
+//            print("now loading the login in screen")
+//            performSegue(withIdentifier: "login", sender: nil)
+//        }
+//
         // Do any additional setup after loading the view.
     }
 
@@ -33,6 +39,8 @@ class MainViewController: UIViewController {
             let alertConfirmation = UIAlertAction(title: "ok", style: .default, handler: nil)
             alert.addAction(alertConfirmation)
             present(alert, animated: true, completion: nil)
+            print("the view loaded and login is is \(isLoggedIn)")
+
     }
     
     @IBAction func ExploreModuleButton(){
@@ -44,7 +52,7 @@ class MainViewController: UIViewController {
     
     @IBAction func StatsModuleButton(){
         let alert = UIAlertController(title: "Error", message: defaultWIPMessage, preferredStyle: .alert)
-        let alertConfirmation = UIAlertAction(title: "ok", style: .default, handler: nil)
+        let alertConfirmation = UIAlertAction(title: "ok", style: .cancel, handler: nil)
         alert.addAction(alertConfirmation)
         present(alert, animated: true, completion: nil)
     }
